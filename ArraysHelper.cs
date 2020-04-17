@@ -56,7 +56,15 @@ namespace Arrays
 
         public static T[] Slice<T>(T[] arr,int beginIndex = 0,int endIndex = 0){
             T[] newArr;
+
+
+            if (beginIndex>endIndex)
+            {
+                newArr = new T[0];
+                return newArr;
+            }
             if(endIndex==0)endIndex=arr.Length;
+            
             if(beginIndex >= arr.Length){
                 newArr = new T[0];
                 return newArr;
@@ -64,6 +72,10 @@ namespace Arrays
             if(beginIndex<0){
                 beginIndex = -1*beginIndex;
                 beginIndex = arr.Length-beginIndex;
+            }
+            if(endIndex<0){
+                endIndex = -1*endIndex;
+                endIndex = arr.Length-endIndex;
             }
             int size = endIndex-beginIndex;
             newArr = new T[size];

@@ -66,12 +66,11 @@ namespace Arrays
                 return newArr;
             }
             if(beginIndex<0){
-                endIndex = arr.Length + endIndex;
-
+                beginIndex = -1*beginIndex;
+                beginIndex = arr.Length-beginIndex;
             }
             if(endIndex<0){
-                endIndex = -1*endIndex;
-                endIndex = arr.Length-endIndex;
+                endIndex = arr.Length + endIndex;
             }
             int size = endIndex-beginIndex;
             newArr = new T[size];

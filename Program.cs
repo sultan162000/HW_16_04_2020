@@ -44,8 +44,8 @@ namespace HW_16_04
             System.Console.WriteLine();
 
 
-            int[] tes1 = {1,2,3,4,5,6,7,8,9};
-            int[] newTest = ArrayHelper.Slice(tes1,beginIndex:2, endIndex: -2);
+            int[] tes1 = {1,2,3,4,5,6,7,8,9,10};
+            int[] newTest = ArrayHelper.Slice(tes1,beginIndex:2, endIndex: 0);
 
             foreach (var item in newTest)
             {

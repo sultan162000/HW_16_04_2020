@@ -15,5 +15,17 @@ namespace Arrays
             return ob;
 
         }
+        public static int Push<T>(ref T[] arr, T ob){
+            int sizeArr = arr.Length+1;
+            T[] newArr = new T[sizeArr];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                newArr[i]=arr[i];
+            }
+            newArr[sizeArr-1] = ob;
+            arr = newArr;
+
+            return sizeArr;
+        }
     }
 }

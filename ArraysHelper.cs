@@ -40,5 +40,38 @@ namespace Arrays
 
             return ob;
         }
+
+        public static int UnShift<T>(ref T[] arr, T ob){
+            int size = arr.Length+1;
+            T[] newArr = new T[size];
+            newArr[0]=ob;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                newArr[i+1]=arr[i];
+            }
+            arr = newArr;
+
+            return size;
+        }
+
+        public static T[] Slice<T>(T[] arr,int beginIndex = 0,int endIndex = 0){
+            T[] newArr;
+            if(endIndex==0)endIndex=arr.Length;
+            if(beginIndex >= arr.Length){
+                newArr = new T[0];
+                return newArr;
+            }
+            int size = endIndex-beginIndex;
+            newArr = new T[size];
+            
+            for (int i = 0; i < size; i++)
+            {
+                newArr[i]=arr[beginIndex++];
+            }
+
+
+
+            return newArr;
+        }
     }
 }

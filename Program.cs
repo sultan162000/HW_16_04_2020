@@ -42,7 +42,7 @@ namespace HW_16_04
 
 
             int[] tes1 = {1,2,3,4,5,6,7,8,9,10};
-            int[] newTest = ArrayHelper.Slice(tes1,endIndex:7,beginIndex:3);
+            int[] newTest = ArrayHelper.Slice(tes1,beginIndex:-3);
 
             foreach (var item in newTest)
             {

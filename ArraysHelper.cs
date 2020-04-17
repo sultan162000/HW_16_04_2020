@@ -61,6 +61,10 @@ namespace Arrays
                 newArr = new T[0];
                 return newArr;
             }
+            if(beginIndex<0){
+                beginIndex = -1*beginIndex;
+                beginIndex = arr.Length-beginIndex;
+            }
             int size = endIndex-beginIndex;
             newArr = new T[size];
             

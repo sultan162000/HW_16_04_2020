@@ -58,11 +58,7 @@ namespace Arrays
             T[] newArr;
 
 
-            if (beginIndex>endIndex)
-            {
-                newArr = new T[0];
-                return newArr;
-            }
+            
             if(endIndex==0)endIndex=arr.Length;
             
             if(beginIndex >= arr.Length){
@@ -70,8 +66,8 @@ namespace Arrays
                 return newArr;
             }
             if(beginIndex<0){
-                beginIndex = -1*beginIndex;
-                beginIndex = arr.Length-beginIndex;
+                endIndex = arr.Length + endIndex;
+
             }
             if(endIndex<0){
                 endIndex = -1*endIndex;

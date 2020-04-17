@@ -7,12 +7,32 @@ namespace HW_16_04
     {
         static void Main(string[] args)
         {
-            string[] ar = {"1,2,3,4,5,6,7","S","REX","PP"};
-            System.Console.WriteLine(ArrayHelper.Push(ref ar,"EXW"));
+            string[] ar = {"A","B","C","D","E"};
+            ArrayHelper.Pop(ref ar);
             foreach (var item in ar)
             {
-                System.Console.WriteLine(item);
+                System.Console.Write(item+"  ");
             }
+            System.Console.WriteLine();
+
+            int[] arr = {1,2,3,4,5,6,7};
+            System.Console.WriteLine(ArrayHelper.Push(ref arr, 8));
+            foreach (var item in arr)
+            {
+                System.Console.Write(item+"  ");
+            }
+            System.Console.WriteLine();
+
+
+            double[] d = {4.4, 3.65, 77.1, 29.98, 84.13, 55.5};
+            System.Console.WriteLine(ArrayHelper.Shift(ref d));
+            foreach (var item in d)
+            {
+                System.Console.Write(item+"  ");
+            }
+            System.Console.WriteLine();
+
+
         }
     }
     

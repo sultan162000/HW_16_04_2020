@@ -27,5 +27,18 @@ namespace Arrays
 
             return sizeArr;
         }
+
+        public static T Shift<T>(ref T[] arr){
+            T ob = arr[0];
+            T[] newArr = new T[arr.Length-1];
+            for (int i = 0; i < newArr.Length; i++)
+            {
+                newArr[i]=arr[i+1];
+            }
+
+            arr = newArr;
+
+            return ob;
+        }
     }
 }
